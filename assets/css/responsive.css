@@ -14,8 +14,8 @@
     }
     .menu__item {
         display: block;
-        margin: 16px 0;
-        line-height: 72px;
+        padding: 8px 0;
+        margin: 8px 0;
     }
 
     .menu__link {
