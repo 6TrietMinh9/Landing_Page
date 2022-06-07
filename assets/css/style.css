@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+:root {
+    --theme-color: rgb(137, 82, 85);
+    --black-color: rgb(43, 43, 43);
+    --white-text: rgb(236, 235, 235);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+ul,
+li {
+    margin: 0;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.6rem;
+}
+
+header {
+    width: 100%;
+    height: 8%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.menu {
+    height: 100%;
+    background: linear-gradient(-145deg, rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.2));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 5px 5px rgba(220, 117, 124, 0.2), 0 1px 2px rgba(93, 91, 91, 0.4);
+}
+
+.menu__logo {
+    margin-left: 40px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu__logo > a {
+    padding: 8px;
+}
+
+.menu__logo .logo__icon {
+    font-size: 20px;
+    color: #fff;
+}
+
+.menu__list {
+    display: flex;
+    justify-content: flex-end;
+    width: 400px;
+    height: 100%;
+    margin-right: 40px;
+}
+
+.menu__item {
+    display: inline-block;
+    padding: 0 14px;
+    transition: all 0.125s ease-in-out;
+}
+
+.menu__link {
+    display: block;
+    color: var(--white-text);
+    font-size: 20px;
+    line-height: 60px;
+    transition: all 0.125s ease-in-out;
+}
+
+.menu__item:hover {
+    background-color: var(--white-text);
+    cursor: pointer;
+}
+.menu__item:hover .menu__link {
+    color: var(--theme-color);
+}
+
+.menu__bar {
+    margin-right: 20px;
+    display: none;
+}
+
+.menu__bar i {
+    padding: 8px;
+    font-size: 2rem;
+    color: var(--white-text);
+}
+
+/* MAIN */
+
+.section1 {
+    width: 100%;
+    height: 100vh;
+    background: url(https://wallpapercave.com/wp/wp2757874.gif);
+    background-attachment: fixed;
+    background-repeat: none;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section1__home {
+    width: 80%;
+    height: 80%;
+    opacity: 1;
+    background: linear-gradient(-145deg, var(--theme-color), rgba(255, 255, 255, 0.2));
+    color: var(--white-text);
+    margin-top: 40px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: fixed;
+    transition: all 0.3s ease;
+}
+
+.home__title {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center;
+    font-size: 4rem;
+}
+
+.home__info {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 40px;
+    font-size: 2rem;
+}
+
+.user-img {
+    width: 160px;
+    height: 160px;
+    background: url(../img/user.jpg);
+    background-size: cover;
+    background-position: center -30px;
+    border-radius: 50%;
+    margin-top: 40px;
+}
+
+.section2__signup {
+    height: 100vh;
+    width: 100%;
+    background-color: #2d3436;
+    position: relative;
+}
