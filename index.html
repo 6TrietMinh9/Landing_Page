@@ -39,10 +39,10 @@
                             <a href="#signup" class="menu__link">Sign Up</a>
                         </li>
                         <li class="menu__item">
-                            <a href="#" class="menu__link">Majors</a>
+                            <a href="#major" class="menu__link">Majors</a>
                         </li>
                         <li class="menu__item">
-                            <a href="#" class="menu__link">Contact</a>
+                            <a href="#contact" class="menu__link">Contact</a>
                         </li>
                     </ul>
                     <div class="menu__bar">
@@ -51,20 +51,95 @@
                 </div>
             </header>
 
-            <section id="home" class="section1">
-                <div class="section1__home">
-                    <h1 class="home__title">Welcome to my home page</h1>
-                    <div class="home__info">
-                        <h2>My name is Triet</h2>
-                        <h3>I'm a Web Developer</h3>
-                        <div class="user-img"></div>
+            <main>
+                <section id="home" class="section section1 bg">
+                    <div class="section-content section1__home">
+                        <div class="heading">
+                            <h1>Welcome to my home page</h1>
+                        </div>
+                        <div class="info-container">
+                            <div class="home__info">
+                                <h2>My name is Triet</h2>
+                                <h3>I'm a Web Developer</h3>
+                                <div class="user-img"></div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            <section id="signup" class="section2">
-                <div class="section2__signup"></div>
-            </section>
+                <section id="signup" class="section section2 bg">
+                    <div class="section-content section2__signup">
+                        <div class="heading">
+                            <h2>Sign Up</h2>
+                        </div>
+                        <div class="info-container">
+                            <div class="form">
+                                <form action="">
+                                    <label for="name" class="form__label">
+                                        Name <span>*</span>
+                                        <input
+                                            id="name"
+                                            class="form__input"
+                                            type="text"
+                                            maxlength="50"
+                                            placeholder="Enter your name"
+                                            required
+                                        />
+                                    </label>
+                                    <label for="birth" class="form__label">
+                                        Birth <span>*</span>
+                                        <input
+                                            id="birth"
+                                            class="form__input"
+                                            type="date"
+                                            required
+                                        />
+                                    </label>
+                                    <label for="phone-number" class="form__label">
+                                        Phone Number <span>*</span>
+                                        <input
+                                            id="phone-number"
+                                            class="form__input"
+                                            type="datetime"
+                                            placeholder="Enter your phone number"
+                                            required
+                                        />
+                                    </label>
+                                    <label for="email" class="form__label">
+                                        Email
+                                        <input
+                                            id="email"
+                                            class="form__input"
+                                            type="email"
+                                            placeholder="Enter your email"
+                                            required
+                                        />
+                                    </label>
+                                    <button class="form__submit">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="major" class="section section3 bg">
+                    <div class="section-content section3__major">
+                        <div class="heading">
+                            <h2>Major</h2>
+                        </div>
+                        <div class="info-container"></div>
+                    </div>
+                </section>
+
+                <section id="contact" class="section section4 bg">
+                    <div class="section-content section4__contact">
+                        <div class="heading">
+                            <h2>Contact</h2>
+                        </div>
+                        <div class="info-container"></div>
+                    </div>
+                </section>
+            </main>
         </div>
 
         <!-- JAVASCRIPT -->
@@ -73,10 +148,10 @@
                 $("body").click(function (e) {
                     if (e.target.className == "menu__bar") {
                         $(".menu__list").toggleClass("show");
-                        $(".section1__home").toggleClass("display");
+                        $(".section-content").toggleClass("display");
                     } else {
                         $(".menu__list").removeClass("show");
-                        $(".section1__home").removeClass("display");
+                        $(".section-content").removeClass("display");
                     }
                 });
             });

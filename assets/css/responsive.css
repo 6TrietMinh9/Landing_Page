@@ -37,11 +37,16 @@
         right: 0;
     }
 
-    .section1__home {
+    .section-content {
         background: unset;
     }
 
-    .section1__home.display {
+    .section-content.display {
         opacity: 0;
+    }
+
+    .user-img {
+        width: 160px;
+        height: 160px;
     }
 }
