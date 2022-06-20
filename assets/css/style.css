@@ -3,7 +3,7 @@
 :root {
     --white-text: rgb(236, 235, 235);
     --black-color: rgb(43, 43, 43);
-    --theme1-color: rgb(107, 62, 79);
+    --theme1-color: rgb(170, 110, 133);
     --theme2-color: rgb(107, 140, 167);
 }
 
@@ -74,7 +74,7 @@ header {
 .menu__list {
     display: flex;
     justify-content: flex-end;
-    width: 400px;
+    width: 600px;
     height: 100%;
     margin-right: 40px;
 }
@@ -92,15 +92,15 @@ header {
     color: var(--white-text);
     font-size: 20px;
     line-height: 60px;
-    transition: all 0.125s ease-in-out;
+    transition: all 0.125s ease;
 }
 
 .menu__item:hover {
-    background-color: var(--white-text);
     cursor: pointer;
+    border-bottom: 2px solid var(--theme2-color);
 }
 .menu__item:hover .menu__link {
-    color: var(--theme-color);
+    color: var(--theme1-color);
 }
 
 .menu__bar {
@@ -118,7 +118,7 @@ header {
 /* MAIN */
 .section {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -180,7 +180,7 @@ header {
 .user-img {
     width: 180px;
     height: 180px;
-    background: url(../img/user.jpg);
+    background: url(../img/user.jpg) no-repeat;
     background-size: cover;
     background-position: center -30px;
     border-radius: 50%;
@@ -188,6 +188,9 @@ header {
 }
 
 /* Section 2 */
+.section2__signup {
+    height: 660px;
+}
 
 .form {
     width: 80%;
@@ -241,4 +244,70 @@ header {
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
+}
+
+/* PROJECTS */
+.project-container {
+    width: 100%;
+    max-width: max-content;
+    background: unset;
+}
+
+.project-tile {
+    width: 80%;
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.project-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0 12px;
+    border-radius: 6px;
+    box-shadow: 4px 4px 10px rgb(0 0 0 / 80%), inset 4px 4px 10px rgb(255 255 255 / 60%);
+    transition: all 0.25s ease;
+}
+.project-item:hover {
+    cursor: pointer;
+    box-shadow: 4px 4px 10px rgb(0 0 0 / 90%), inset 4px 4px 10px rgb(255 255 255 / 90%);
+}
+
+.project-img {
+    width: 380px;
+    height: 480px;
+    object-fit: cover;
+}
+
+.project-name {
+    color: var(--white-text);
+    text-align: center;
+    margin-top: 18px;
+}
+
+/* CONTACT */
+.section4__contact {
+    padding: 40px 0;
+}
+
+.contact-content {
+    margin-top: 100px;
+    width: 40%;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.profile-header {
+    font-size: 3.4rem;
+}
+#profile-link {
+    font-size: 6rem;
+    color: var(--black-color);
 }
